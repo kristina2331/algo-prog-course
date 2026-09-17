@@ -48,3 +48,31 @@ double studentsPerGroupCorrect = (double)totalStudents / groupsCount;
 
 Console.WriteLine($"25 / 4 как int: {studentsPerGroupWrong}");
 Console.WriteLine($"25 / 4 как double: {studentsPerGroupCorrect}");
+
+Console.WriteLine();
+Console.WriteLine("Способы собрать строку");
+
+string firstName = "Анна";
+string lastName = "Смирнова";
+
+string fullNameConcat = firstName + " " + lastName;
+string fullNameInterp = $"{firstName} {lastName}";
+string fullNameConcatMethod = string.Concat(firstName, " ", lastName);
+
+Console.WriteLine(fullNameConcat);
+Console.WriteLine(fullNameInterp);
+Console.WriteLine(fullNameConcatMethod);
+Console.WriteLine(fullNameConcatMethod);
+Console.WriteLine($"Все три строки равны: {fullNameConcat == fullNameInterp && fullNameInterp == fullNameConcatMethod}");
+
+Console.WriteLine();
+Console.WriteLine("Константы");
+
+const double VatRate = 0.20;
+const string CollegeName = "ВФ ВолГУ";
+
+double productPrice = 1000;
+double priceWithVat = productPrice * (1 + VatRate);
+
+Console.WriteLine($"Учебное заведение: {CollegeName}");
+Console.WriteLine($"Цена без НДС: {productPrice}, с НДС ({VatRate:P0}): {priceWithVat}");
